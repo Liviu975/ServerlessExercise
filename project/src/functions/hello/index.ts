@@ -8,7 +8,7 @@ export default {
       http: {
         method: 'post',
         path: 'addUserName',
-        //private: true,
+        private: true,
         request: {
           schemas: {
             'application/json': schema,
