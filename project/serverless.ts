@@ -5,7 +5,7 @@ import addUserName from '@functions/hello';
 const serverlessConfiguration: AWS = {
   service: 'project',
   frameworkVersion: '3',
-  plugins: ['serverless-esbuild'],
+  plugins: ['serverless-esbuild', /*'serverless-add-api-key'*/],
   provider: {
     name: 'aws',
     runtime: 'nodejs14.x',
@@ -34,6 +34,10 @@ const serverlessConfiguration: AWS = {
   functions: { addUserName },
   package: { individually: true },
   custom: {
+    // apiKeys: {
+    //   name: "AccessKeyN",
+    //   value: "this is the api key"
+    // },
     esbuild: {
       bundle: true,
       minify: false,
