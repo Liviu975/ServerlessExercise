@@ -34,10 +34,10 @@ const serverlessConfiguration: AWS = {
   functions: { addUserName },
   package: { individually: true },
   custom: {
-    // apiKeys: {
+    // apiKeys: [{
     //   name: "AccessKeyN",
     //   value: "this is the api key"
-    // },
+    // }],
     esbuild: {
       bundle: true,
       minify: false,
